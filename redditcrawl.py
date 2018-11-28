@@ -13,17 +13,6 @@ reddit = praw.Reddit(client_id='9XU4PkAvuNpyWw',
                      user_agent='testscript by /u/fakebot3',
                      username='mangotangodz')
 
-# def getSubComments(comment, allComments, replyList, verbose=True):
-#     allComments.append(comment)
-#     if not hasattr(comment, "replies"):
-#         replies = comment.comments()
-#         if verbose: print("fetching (" + str(len(allComments)) + " comments fetched total)")
-#     else:
-#         replies = comment.replies
-#     replyList.append(replies)
-#     for child in replies:
-#         getSubComments(child, allComments, replyList, verbose=verbose)
-
 def getSubComments(comment, allComments, replyList, verbose=True):
     allComments.append(comment)
     if not hasattr(comment, "replies"):
