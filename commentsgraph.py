@@ -1,3 +1,8 @@
+import warnings
+def warn(*args, **kwargs):
+    pass
+warnings.warn = warn
+from textblob import TextBlob
 import praw
 import pprint
 import argparse     # allow the application to accept input filenames as arguments
@@ -8,8 +13,8 @@ import networkx as nx
 import numpy as np
 import matplotlib.pyplot as plt
 import pylab
-
 import json
+
 reddit = praw.Reddit(client_id='9XU4PkAvuNpyWw',
                      client_secret='O6q9aXiKHC0cPLhui6WEJiZMWa0',
                      password='zy5858462',
@@ -102,19 +107,37 @@ if __name__ == '__main__':  # running the application
     with open(savedfile) as f:
         data = json.load(f)
 
+    postcontent = redditpost.replace('_', ' ')
+    G.add_node(postcontent)
+
+    red_edges = []
+    green_edges = []
+    yellow_edges = []
+
     for index, reply in enumerate(data):
         curnode = reply['body']
+        curnode_sentiment = TextBlob(curnode)
+        if curnode_sentiment.sentiment.polarity > 0:
+            green_edges.append((postcontent, curnode))
+        elif curnode_sentiment.sentiment.polarity < 0:
+            red_edges.append((postcontent, curnode))
+        else:
+            yellow_edges.append((postcontent, curnode))
         G.add_node(curnode)
         if reply['parent']:
             for i in range(index+1):
                 if reply['parent'] == data[index-i]['author_name']:
                     G.add_edges_from([(data[index-i]['body'], reply['body'])])
+        else:
+            G.add_edges_from([(postcontent, curnode)])
 
     edge_labels = dict([((u, v,)) for u, v, d in G.edges(data=True)])
 
     pos = nx.spring_layout(G)
     node_labels = {node: node for node in G.nodes()}
-    nx.draw(G, pos, node_color='red', node_size=1500,
-            edge_color='black', edge_cmap=plt.cm.Reds)
+    
+    edge_colors = ['red' if edge in red_edges else 'green' if edge in green_edges else 'yellow' for edge in G.edges()]
+    nx.draw(G, pos, node_color='blue', node_size=1000,
+            edge_color=edge_colors, edge_cmap=plt.cm.Reds)
     nx.draw_networkx_labels(G, pos, labels=node_labels)
     pylab.show()
