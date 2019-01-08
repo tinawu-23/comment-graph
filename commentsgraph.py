@@ -1,3 +1,5 @@
+''' Main Program '''
+
 import warnings
 def warn(*args, **kwargs):
     pass
@@ -61,7 +63,7 @@ def store_json(id, myjson):
     return filename
 
 if __name__ == '__main__':  # running the application
-
+    cnter = 0 
     ### SAVE COMMENTS TO JSON ###
     parser = argparse.ArgumentParser(
         description=__doc__,
@@ -108,8 +110,11 @@ if __name__ == '__main__':  # running the application
         data = json.load(f)
 
     postcontent = redditpost.replace('_', ' ')
+
+    # add center node as the content of post
     G.add_node(postcontent)
 
+    # emotion scores of posts
     red_edges = []
     green_edges = []
     yellow_edges = []
@@ -128,8 +133,13 @@ if __name__ == '__main__':  # running the application
             for i in range(index+1):
                 if reply['parent'] == data[index-i]['author_name']:
                     G.add_edges_from([(data[index-i]['body'], reply['body'])])
+                    cnter += 1
+                    print("{}   PARENT: {}; REPLY: {}".format(cnter,data[index-i]['body'], reply['body']))
+                    break
         else:
             G.add_edges_from([(postcontent, curnode)])
+            cnter += 1
+            print("{}   PARENT: {}; REPLY: {}".format(cnter,postcontent, curnode))
 
     edge_labels = dict([((u, v,)) for u, v, d in G.edges(data=True)])
 
