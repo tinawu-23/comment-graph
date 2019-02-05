@@ -122,6 +122,7 @@ if __name__ == '__main__':  # running the application
 
     txtfilename = './networkmatrix/'+redditpost+'.csv'
     f = open(txtfilename, "w")
+    print(txtfilename)
     f.write("PARENT,CHILD\n")
 
     for index, reply in enumerate(data):
@@ -139,7 +140,7 @@ if __name__ == '__main__':  # running the application
                 if reply['parent'] == data[index-i]['author_name']:
                     G.add_edges_from([(data[index-i]['body'], reply['body'])])
                     cnter += 1
-                    print("{}   PARENT: {}; REPLY: {}".format(cnter,data[index-i]['body'], reply['body']))
+                    #print("{}   PARENT: {}; REPLY: {}".format(cnter,data[index-i]['body'], reply['body']))
                     # create unique post ids to shorten how each post is represented
                     # author name + length of post + first letter + second to last letter
                     parentstr = data[index-i]['author_name'] + str(len(data[index-i]['body'])) + data[index-i]['body'][0] + data[index-i]['body'][-2]
@@ -149,7 +150,7 @@ if __name__ == '__main__':  # running the application
         else:
             G.add_edges_from([(postcontent, curnode)])
             cnter += 1
-            print("{}   PARENT: {}; REPLY: {}".format(cnter,postcontent, curnode))
+            #print("{}   PARENT: {}; REPLY: {}".format(cnter,postcontent, curnode))
             parentstr = "ORIGINALPOST"
             childstr = reply['author_name'] + str(len(reply['body'])) + reply['body'][0] + reply['body'][-2]
             f.write("{},{}\n".format(parentstr, childstr))
