@@ -1,0 +1,70 @@
+{
+    "graph": [],
+    
+    "links": [
+        {
+            "source": "a",
+            "target": "b"
+        },
+        {
+            "source": "a",
+            "target": "c"
+        },
+        {
+            "source": "a",
+            "target": "d"
+        },
+        {
+            "source": "a",
+            "target": "e"
+        },
+        {
+            "source": "a",
+            "target": "f"
+        },
+        {
+            "source": "b",
+            "target": "f"
+        }
+    ],
+    "nodes": [
+        {
+            "size": 10,
+            "score": 0,
+            "id": "a",
+            "type": "circle"
+        },
+        {
+            "size": 10,
+            "score": 0,
+            "id": "a",
+            "type": "circle"
+        },
+        {
+            "size": 10,
+            "score": 0,
+            "id": "a",
+            "type": "circle"
+        },
+        {
+            "size": 10,
+            "score": 0,
+            "id": "a",
+            "type": "circle"
+        },
+        {
+            "size": 10,
+            "score": 0,
+            "id": "a",
+            "type": "circle"
+        },
+        {
+            "size": 10,
+            "score": 0,
+            "id": "a",
+            "type": "circle"
+        }
+    ],
+    "directed": true,
+    "multigraph": false
+}
