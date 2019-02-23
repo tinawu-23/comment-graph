@@ -145,7 +145,12 @@ if __name__ == '__main__':  # running the application
                     # author name + length of post + first letter + second to last letter
                     parentstr = data[index-i]['author_name'] + str(len(data[index-i]['body'])) + data[index-i]['body'][0] + data[index-i]['body'][-2]
                     childstr = reply['author_name'] + str(len(reply['body'])) + reply['body'][0] + reply['body'][-2]
-                    f.write("{},{}\n".format(parentstr,childstr))
+                    parentnode = data[index-i]['body']
+                    parentSentiment = TextBlob(parentnode)
+                    childnode = reply['body']
+                    childSentiment = TextBlob(childnode)
+                    f.write("{},{},{},{}\n".format(
+                        parentstr, parentSentiment.sentiment.polarity, childstr, parentSentiment.sentiment.polarity))
                     break
         else:
             G.add_edges_from([(postcontent, curnode)])
@@ -153,7 +158,12 @@ if __name__ == '__main__':  # running the application
             #print("{}   PARENT: {}; REPLY: {}".format(cnter,postcontent, curnode))
             parentstr = "ORIGINALPOST"
             childstr = reply['author_name'] + str(len(reply['body'])) + reply['body'][0] + reply['body'][-2]
-            f.write("{},{}\n".format(parentstr, childstr))
+            parentnode = postcontent
+            parentSentiment = TextBlob(parentnode)
+            childnode = curnode
+            childSentiment = TextBlob(childnode)
+            f.write("{},{},{},{}\n".format(
+                parentstr, parentSentiment.sentiment.polarity, childstr, parentSentiment.sentiment.polarity))
 
     f.close()
 

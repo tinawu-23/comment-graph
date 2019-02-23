@@ -1,6 +1,8 @@
 import sys
 import json
 import csv
+import numpy as np
+
 '''
 with open('./data.json') as handle:
     dictdump = json.loads(handle.read())
@@ -22,20 +24,29 @@ if len(sys.argv) == 1:
 else:
     filename = sys.argv[1]
 
-filename = '.'+ filename
+#filename = '.'+ filename
 
 with open(filename, 'r') as f:
     r = csv.reader(f, delimiter=',')
     for row in r:
         if 'PARENT' in row and 'CHILD' in row:
             continue
-        for item in row:
-            uniqnodes.append(item)
+        uniqnodes.append((row[0],row[1]))
+        uniqnodes.append((row[2], row[3]))
             
 uniqnodes = list(set(uniqnodes))
+
 for node in uniqnodes:
     nodedict = {}
-    nodedict['id'] = node
+    nodedict['id'] = node[0]
+    sentimentScore = float(node[1])
+    if sentimentScore > 0:
+        nodedict['color'] = "green"
+    elif sentimentScore == 0:
+        nodedict['color'] = "yellow"
+    else:
+        nodedict['color'] = "red"
+
     listnodes.append(nodedict)
 
 jsondict['nodes'] = listnodes
@@ -47,7 +58,7 @@ with open(filename, 'r') as f:
             continue
         linkdict = {}
         try:
-            linkdict['source'], linkdict['target'] = row[0], row[1]
+            linkdict['source'], linkdict['target'] = row[0], row[2]
         except:
             continue
         listlinks.append(linkdict)
