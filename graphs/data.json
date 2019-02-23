@@ -2,311 +2,388 @@
     "nodes": [
         {
             "id": "Myriel",
-            "group": 1
+            "group": 1,
+            "color": "blue"
         },
         {
             "id": "Napoleon",
-            "group": 1
+            "group": 1,
+            "color": "blue"
         },
         {
             "id": "Mlle.Baptistine",
-            "group": 1
+            "group": 1,
+            "color": "blue"
         },
         {
             "id": "Mme.Magloire",
-            "group": 1
+            "group": 1,
+            "color": "blue"
         },
         {
             "id": "CountessdeLo",
-            "group": 1
+            "group": 1,
+            "color": "blue"
         },
         {
             "id": "Geborand",
-            "group": 1
+            "group": 1,
+            "color": "red"
         },
         {
             "id": "Champtercier",
-            "group": 1
+            "group": 1,
+            "color": "red"
         },
         {
             "id": "Cravatte",
-            "group": 1
+            "group": 1,
+            "color": "red"
         },
         {
             "id": "Count",
-            "group": 1
+            "group": 1,
+            "color": "red"
         },
         {
             "id": "OldMan",
-            "group": 1
+            "group": 1,
+            "color": "red"
         },
         {
             "id": "Labarre",
-            "group": 2
+            "group": 2,
+            "color": "red"
         },
         {
             "id": "Valjean",
-            "group": 2
+            "group": 2,
+            "color": "red"
         },
         {
             "id": "Marguerite",
-            "group": 3
+            "group": 3,
+            "color": "red"
         },
         {
             "id": "Mme.deR",
-            "group": 2
+            "group": 2,
+            "color": "red"
         },
         {
             "id": "Isabeau",
-            "group": 2
+            "group": 2,
+            "color": "red"
         },
         {
             "id": "Gervais",
-            "group": 2
+            "group": 2,
+            "color": "red"
         },
         {
             "id": "Tholomyes",
-            "group": 3
+            "group": 3,
+            "color": "red"
         },
         {
             "id": "Listolier",
-            "group": 3
+            "group": 3,
+            "color": "red"
         },
         {
             "id": "Fameuil",
-            "group": 3
+            "group": 3,
+            "color": "red"
         },
         {
             "id": "Blacheville",
-            "group": 3
+            "group": 3,
+            "color": "red"
         },
         {
             "id": "Favourite",
-            "group": 3
+            "group": 3,
+            "color": "red"
         },
         {
             "id": "Dahlia",
-            "group": 3
+            "group": 3,
+            "color": "red"
         },
         {
             "id": "Zephine",
-            "group": 3
+            "group": 3,
+            "color": "red"
         },
         {
             "id": "Fantine",
-            "group": 3
+            "group": 3,
+            "color": "green"
         },
         {
             "id": "Mme.Thenardier",
-            "group": 4
+            "group": 4,
+            "color": "red"
         },
         {
             "id": "Thenardier",
-            "group": 4
+            "group": 4,
+            "color": "red"
         },
         {
             "id": "Cosette",
-            "group": 5
+            "group": 5,
+            "color": "red"
         },
         {
             "id": "Javert",
-            "group": 4
+            "group": 4,
+            "color": "red"
         },
         {
             "id": "Fauchelevent",
-            "group": 0
+            "group": 0,
+            "color": "red"
         },
         {
             "id": "Bamatabois",
-            "group": 2
+            "group": 2,
+            "color": "red"
         },
         {
             "id": "Perpetue",
-            "group": 3
+            "group": 3,
+            "color": "red"
         },
         {
             "id": "Simplice",
-            "group": 2
+            "group": 2,
+            "color": "blue"
         },
         {
             "id": "Scaufflaire",
-            "group": 2
+            "group": 2,
+            "color": "blue"
         },
         {
             "id": "Woman1",
-            "group": 2
+            "group": 2,
+            "color": "blue"
         },
         {
             "id": "Judge",
-            "group": 2
+            "group": 2,
+            "color": "blue"
         },
         {
             "id": "Champmathieu",
-            "group": 2
+            "group": 2,
+            "color": "blue"
         },
         {
             "id": "Brevet",
-            "group": 2
+            "group": 2,
+            "color": "blue"
         },
         {
             "id": "Chenildieu",
-            "group": 2
+            "group": 2,
+            "color": "blue"
         },
         {
             "id": "Cochepaille",
-            "group": 2
+            "group": 2,
+            "color": "blue"
         },
         {
             "id": "Pontmercy",
-            "group": 4
+            "group": 4,
+            "color": "blue"
         },
         {
             "id": "Boulatruelle",
-            "group": 6
+            "group": 6,
+            "color": "blue"
         },
         {
             "id": "Eponine",
-            "group": 4
+            "group": 4,
+            "color": "blue"
         },
         {
             "id": "Anzelma",
-            "group": 4
+            "group": 4,
+            "color": "blue"
         },
         {
             "id": "Woman2",
-            "group": 5
+            "group": 5,
+            "color": "blue"
         },
         {
             "id": "MotherInnocent",
-            "group": 0
+            "group": 0,
+            "color": "blue"
         },
         {
             "id": "Gribier",
-            "group": 0
+            "group": 0,
+            "color": "blue"
         },
         {
             "id": "Jondrette",
-            "group": 7
+            "group": 7,
+            "color": "blue"
         },
         {
             "id": "Mme.Burgon",
-            "group": 7
+            "group": 7,
+            "color": "blue"
         },
         {
             "id": "Gavroche",
-            "group": 8
+            "group": 8,
+            "color": "blue"
         },
         {
             "id": "Gillenormand",
-            "group": 5
+            "group": 5,
+            "color": "blue"
         },
         {
             "id": "Magnon",
-            "group": 5
+            "group": 5,
+            "color": "blue"
         },
         {
             "id": "Mlle.Gillenormand",
-            "group": 5
+            "group": 5,
+            "color": "blue"
         },
         {
             "id": "Mme.Pontmercy",
-            "group": 5
+            "group": 5,
+            "color": "blue"
         },
         {
             "id": "Mlle.Vaubois",
-            "group": 5
+            "group": 5,
+            "color": "blue"
         },
         {
             "id": "Lt.Gillenormand",
-            "group": 5
+            "group": 5,
+            "color": "blue"
         },
         {
             "id": "Marius",
-            "group": 8
+            "group": 8,
+            "color": "blue"
         },
         {
             "id": "BaronessT",
-            "group": 5
+            "group": 5,
+            "color": "red"
         },
         {
             "id": "Mabeuf",
-            "group": 8
+            "group": 8,
+            "color": "red"
         },
         {
             "id": "Enjolras",
-            "group": 8
+            "group": 8,
+            "color": "red"
         },
         {
             "id": "Combeferre",
-            "group": 8
+            "group": 8,
+            "color": "red"
         },
         {
             "id": "Prouvaire",
-            "group": 8
+            "group": 8,
+            "color": "red"
         },
         {
             "id": "Feuilly",
-            "group": 8
+            "group": 8,
+            "color": "red"
         },
         {
             "id": "Courfeyrac",
-            "group": 8
+            "group": 8,
+            "color": "red"
         },
         {
             "id": "Bahorel",
-            "group": 8
+            "group": 8,
+            "color": "red"
         },
         {
             "id": "Bossuet",
-            "group": 8
+            "group": 8,
+            "color": "red"
         },
         {
             "id": "Joly",
-            "group": 8
+            "group": 8,
+            "color": "red"
         },
         {
             "id": "Grantaire",
-            "group": 8
+            "group": 8,
+            "color": "red"
         },
         {
             "id": "MotherPlutarch",
-            "group": 9
+            "group": 9,
+            "color": "red"
         },
         {
             "id": "Gueulemer",
-            "group": 4
+            "group": 4,
+            "color": "red"
         },
         {
             "id": "Babet",
-            "group": 4
+            "group": 4,
+            "color": "red"
         },
         {
             "id": "Claquesous",
-            "group": 4
+            "group": 4,
+            "color": "red"
         },
         {
             "id": "Montparnasse",
-            "group": 4
+            "group": 4,
+            "color": "red"
         },
         {
             "id": "Toussaint",
-            "group": 5
+            "group": 5,
+            "color": "red"
         },
         {
             "id": "Child1",
-            "group": 10
+            "group": 10,
+            "color": "red"
         },
         {
             "id": "Child2",
-            "group": 10
+            "group": 10,
+            "color": "green"
         },
         {
             "id": "Brujon",
-            "group": 4
+            "group": 4,
+            "color": "red"
         },
         {
             "id": "Mme.Hucheloup",
-            "group": 8
+            "group": 8,
+            "color": "red"
         }
     ],
     "links": [
