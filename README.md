@@ -10,3 +10,5 @@ Output: ```filename``` matrix data file stored in networkmatrix folder
 To generate d3 graph: ```python graphs/preprocess.py {filename}``` (or run with no args, provide filename later)  
 This generates a ```result.json``` file being processed by graph.html   
 Run ```graph.html``` in browser to view graph
+
+To crawl images from http://hoaxes.org, go to crawlimage folder and run ```python crawler.py```
