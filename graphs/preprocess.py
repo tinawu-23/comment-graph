@@ -31,6 +31,12 @@ with open(filename, 'r') as f:
     for row in r:
         if 'PARENT' in row and 'CHILD' in row:
             continue
+        if len(row) != 4:
+            print(row, len(row))
+            print(row[0])
+            print(row[1])
+            print(row[2])
+            print(row[3])
         uniqnodes.append((row[0],row[1]))
         uniqnodes.append((row[2], row[3]))
             
