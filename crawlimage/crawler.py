@@ -14,6 +14,7 @@ baseurl = 'http://hoaxes.org/photo_database/years/category/'
 
 f = open("imageTitle.txt", "w")
 f.write('FileName\tTitle\n')
+ff = open("imageURL.txt", "w")
 
 for timeperiod in timeperiods:
     for page in pages:
@@ -24,7 +25,7 @@ for timeperiod in timeperiods:
             continue
 
         data = source.text
-        soup = BeautifulSoup(data, 'html5lib')
+        soup = BeautifulSoup(data, 'lxml')
         imgtags = soup.find_all('img')
         titles = [str(b.text.encode("utf-8"))[1:].replace("'", "").replace("\\xe2\\x80\\x99", "").replace("\\xe2\\x80\\x98", "").replace("\\xe2\\x80\\x9d", "").replace("\\xe2\\x80\\x9c","") for b in soup.find_all('b')
                   if "\\xc2\\xa0\\xc2\\xa0" not in str(b.text.encode("utf-8"))]
@@ -42,6 +43,9 @@ for timeperiod in timeperiods:
                 imgname = imgurl.split('/')[-1]
                 f.write("{}\t{}\n".format(imgname,titles[i]))
                 imgname = 'images/' + imgname
-                print(imgname)
+                # print(imgname)
                 urllib.request.urlretrieve(imgurl, imgname)
+                ff.write(imgurl+'\n')
                 i += 1
+f.close()
+ff.close()
